@@ -1,0 +1,86 @@
+@use '../../../../styles/_variables' as vars;
+@use '../../../../styles/_mixins' as mixins;
+
+.auth-container {
+  --background: #{vars.$sh-color-background};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  width: 100%;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 400px;
+  padding: vars.$sh-space-lg;
+  border-radius: vars.$sh-radius;
+  box-shadow: vars.$sh-shadow-soft;
+  background: vars.$sh-color-surface;
+
+  // Adaptabilité Desktop fluide
+  @include mixins.respond-up('desktop') {
+    max-width: 450px;
+    padding: vars.$sh-space-xl;
+  }
+}
+
+.logo-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  margin-bottom: vars.$sh-space-md;
+
+  .app-logo {
+    width: 80px;
+    height: auto;
+    margin-bottom: vars.$sh-space-sm;
+  }
+
+  mat-card-title {
+    font-size: 24px;
+    font-weight: vars.$sh-font-weight-bold;
+    color: vars.$sh-color-on-surface;
+  }
+}
+
+.info-text {
+  color: vars.$sh-color-muted;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.auth-actions {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: vars.$sh-space-md;
+}
+
+.google-btn {
+  width: 100%;
+  padding: vars.$sh-space-md;
+  border-radius: vars.$sh-radius-sm !important;
+  font-weight: vars.$sh-font-weight-medium;
+
+  .btn-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: vars.$sh-space-xs;
+  }
+
+  .google-icon {
+    width: 20px;
+    height: 20px;
+  }
+}

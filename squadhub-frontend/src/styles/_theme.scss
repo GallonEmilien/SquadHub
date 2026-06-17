@@ -1,0 +1,42 @@
+@use './_variables' as vars;
+@use '@angular/material' as mat;
+@use '@angular/material/core' as mat-core;
+
+$sh-primary-palette: mat.define-palette(mat.$indigo-palette, 600, 500, 200);
+$sh-accent-palette: mat.define-palette(mat.$teal-palette, 500, 300, 700);
+$sh-warn-palette: mat.define-palette(mat.$red-palette, 600);
+
+$sh-theme: mat.define-light-theme((
+  color: (
+    primary: $sh-primary-palette,
+    accent: $sh-accent-palette,
+    warn: $sh-warn-palette,
+  ),
+  typography: mat.define-typography-config((
+    font-family: vars.$sh-font-family,
+    headline: mat.define-typography-level(28px, 36px, 700),
+    title: mat.define-typography-level(20px, 28px, 600),
+    body-1: mat.define-typography-level(vars.$sh-font-size-base, 28px, 400),
+  )),
+  density: 0,
+));
+
+@include mat.core();
+@include mat.all-component-themes($sh-theme);
+@include mat.all-component-typographies($sh-theme);
+
+:root {
+  --ion-color-primary: #{vars.$sh-color-primary};
+  --ion-color-secondary: #{vars.$sh-color-secondary};
+  --ion-color-success: #{vars.$sh-color-success};
+  --ion-color-warning: #{vars.$sh-color-warning};
+  --ion-color-danger: #{vars.$sh-color-danger};
+  --ion-color-light: #{vars.$sh-color-surface-alt};
+  --ion-color-medium: #{vars.$sh-color-muted};
+  --ion-color-dark: #{vars.$sh-color-on-surface};
+  --ion-background-color: #{vars.$sh-color-background};
+  --ion-text-color: #{vars.$sh-color-on-surface};
+  --ion-font-family: vars.$sh-font-family;
+  --ion-border-radius: vars.$sh-radius;
+  --ion-safe-area-top: 1rem;
+}

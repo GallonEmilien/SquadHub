@@ -1,0 +1,47 @@
+@use './styles/_variables' as vars;
+@use './styles/_mixins' as mixins;
+@use './styles/_theme' as theme;
+
+@import '@ionic/angular/css/core.css';
+@import '@ionic/angular/css/normalize.css';
+@import '@ionic/angular/css/structure.css';
+@import '@ionic/angular/css/typography.css';
+@import '@ionic/angular/css/display.css';
+@import '@ionic/angular/css/padding.css';
+@import '@ionic/angular/css/float-elements.css';
+@import '@ionic/angular/css/text-alignment.css';
+@import '@ionic/angular/css/text-transformation.css';
+@import '@ionic/angular/css/flex-utils.css';
+
+:root {
+  font-family: vars.$sh-font-family;
+  font-size: vars.$sh-font-size-base;
+  color: vars.$sh-color-on-surface;
+  background-color: vars.$sh-color-background;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: vars.$sh-color-background;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+ion-app {
+  min-height: 100vh;
+  background: var(--ion-background-color);
+}

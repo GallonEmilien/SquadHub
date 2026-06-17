@@ -1,0 +1,35 @@
+/* SquadHub Design Tokens */
+$sh-color-primary: #2b6af2;
+$sh-color-secondary: #16c79a;
+$sh-color-surface: #ffffff;
+$sh-color-surface-alt: #f4f7fb;
+$sh-color-background: #f8fbff;
+$sh-color-border: #dbe2ee;
+$sh-color-muted: #6f7a92;
+$sh-color-on-primary: #ffffff;
+$sh-color-on-surface: #102a43;
+$sh-color-danger: #f2564c;
+$sh-color-warning: #f6a609;
+$sh-color-success: #22c55e;
+
+$sh-font-family: 'Inter', 'Roboto', sans-serif;
+$sh-font-size-base: 16px;
+$sh-font-size-scale: 1.125;
+$sh-font-weight-regular: 400;
+$sh-font-weight-medium: 500;
+$sh-font-weight-bold: 700;
+
+$sh-radius: 22px;
+$sh-radius-sm: 14px;
+$sh-shadow-soft: 0 24px 60px rgba(16, 42, 67, 0.08);
+
+$sh-space-xxs: 0.25rem;
+$sh-space-xs: 0.5rem;
+$sh-space-sm: 0.75rem;
+$sh-space-md: 1rem;
+$sh-space-lg: 1.5rem;
+$sh-space-xl: 2rem;
+$sh-space-xxl: 3rem;
+
+$sh-breakpoint-tablet: 720px;
+$sh-breakpoint-desktop: 1080px;

@@ -1,0 +1,14 @@
+spring:
+  mongodb:
+    host: localhost
+    port: 27017
+    database: squadhub
+    username: admin
+    password: password
+    representation:
+      uuid: standard
+
+app:
+  jwt:
+    secret: "secret_key"
+    expiration-ms: 86400000

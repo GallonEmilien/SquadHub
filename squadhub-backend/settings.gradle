@@ -1,0 +1,5 @@
+rootProject.name = 'squadhub-backend'
+
+include 'squadhub-domain'
+include 'squadhub-infrastructure'
+include 'squadhub-bootstrap'

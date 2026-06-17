@@ -1,0 +1,39 @@
+@use './_variables' as vars;
+
+@mixin respond-up($breakpoint) {
+  @if $breakpoint == 'tablet' {
+    @media (min-width: #{vars.$sh-breakpoint-tablet}) {
+      @content;
+    }
+  }
+  @else if $breakpoint == 'desktop' {
+    @media (min-width: #{vars.$sh-breakpoint-desktop}) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-down($breakpoint) {
+  @if $breakpoint == 'tablet' {
+    @media (max-width: #{vars.$sh-breakpoint-tablet - 1}) {
+      @content;
+    }
+  }
+  @else if $breakpoint == 'desktop' {
+    @media (max-width: #{vars.$sh-breakpoint-desktop - 1}) {
+      @content;
+    }
+  }
+}
+
+@mixin card-surface {
+  background: vars.$sh-color-surface;
+  border: 1px solid rgba(16, 42, 67, 0.08);
+  border-radius: vars.$sh-radius;
+  box-shadow: vars.$sh-shadow-soft;
+}
+
+@mixin focus-ring {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(43, 106, 242, 0.18);
+}
